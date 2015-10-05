@@ -80,8 +80,9 @@ color and removing their underline.
 ## Exercise 6:
 Using your newly-acquired HTML and CSS fus, work on the personal page that you created on the first day of class.
 Especially, you should be learning about the [new stuff in CSS3](http://www.1stwebdesigner.com/css3-introduction/)
-through this link, as well as other links. Make this a personal discovery, and concentrate only on the aspects that
-you think would help you build your page. Ask us questions if you are not sure about something that you read.
+through this link, as well as other resources, using your google-fu. Make this a personal discovery, and concentrate 
+only on the aspects that you think would help you build your page. Ask us questions if you are not sure about 
+something that you read.
 
 **Remember**: CSS is HUGE! You shouldn't be trying to remember how to do everything, but rather how to find information
 about how to do what you want to do.
