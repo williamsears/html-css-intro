@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+    <head>
+        <title>DecodeMTL - Full-stack web development</title>
+        
+        <style type="text/css">
+            body {
+                margin: 0;
+            }
+            section {
+                border-bottom: 1px solid black;
+                overflow: hidden;
+            }
+            .technologies {
+                background-color: aliceblue;
+            }
+            .schedule {
+                background-color: tomato;
+            }
+            .curriculum {
+                background-color: rgba(0, 255, 0, 0.5);
+            }
+            /* select all the UL elements that are anywhere insde a NAV element */
+            nav ul {
+                list-style: none;
+            }
+            nav li {
+                display: inline;
+                border: 1px solid black;
+                padding: 5px;
+                margin-left: 10px;
+            }
+            nav a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <nav>
+            <ul><!-- generated with ul>(li>a)*4 -->
+                <li><a href="">Technologies</a></li>
+                <li><a href="">Schedule</a></li>
+                <li><a href="">Curriculum</a></li>
+                <li><a href="">How to apply</a></li>
+            </ul>
+        </nav>
+        
+        
+        <header>
+            <!-- Headings give information about the structure of the page -->
+            <h1>DecodeMTL - Full-stack web development</h1>
+            <p>Come here to lear to be a developer!</p>
+        </header>
+        
+        <section class="technologies">
+            <header>
+                <h2>Technologies</h2>
+                <p>Here are the diff technologies we will see</p>
+            </header>
+            <!-- Lists -->
+            <ul><!-- un-ordered list-->
+                <li>JavaScript</li>
+                <li>NodeJS</li>
+                <li>Express</li>
+            </ul>
+        </section>
+        
+        <section class="schedule">
+            <h2>Schedule</h2>
+        </section>
+        
+        <section class="curriculum">
+            <h2>Curriculum</h2>
+            <ol><!-- ordered list, generated with ol>li*4 -->
+                <li>
+                    <h3>Programming</h3>
+                    <ul><!-- lists can be nested -->
+                        <li>Basic JavaScript syntax</li>
+                        <li>Web server with Node</li>
+                        <li>Callbacks and Promises</li>
+                    </ul>
+                </li>
+                <li>Back-end development</li>
+                <li>Front-end development</li>
+                <li>Project</li>
+            </ol>
+        </section>
+        
+        <section class="how-to-apply">
+            <h2>How to apply</h2>
+        </section>
+        
+        <aside>
+            <p>
+                Look at this great link of what some bootcamp attendees were able to build after their bootcamp
+            </p>
+            <a href="http://www.awesome-project.com">click here</a>
+            <a href="http://www.awesome-project.com">click here</a>
+            <a href="http://www.awesome-project.com">click here</a>
+            <a href="http://www.awesome-project.com">click here</a>
+            <a href="http://www.awesome-project.com">click here</a>
+            
+        </aside>
+        
+        <footer>
+            <h3>Other pages</h3>
+            <ul>
+                <li><a href="about.html">Read more about us</a></li>
+            </ul>
+            <h3>Partners</h3>
+            <ul>
+                <li>
+                    <a href="http://kidscodejeunesse.org/home/">
+                        <img src="images/partners/kidscode-logo.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://kidscodejeunesse.org/home/">
+                        <img src="images/partners/kidscode-logo.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://kidscodejeunesse.org/home/">
+                        <img src="images/partners/kidscode-logo.jpg">
+                    </a>
+                </li>
+                
+            </ul>
+        </footer>
+        
+    </body>
+</html>
