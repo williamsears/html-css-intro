@@ -29,6 +29,7 @@ different opinion about it, and the CSS rules in there often use non-official pr
 * Notice that the `ul` has a property `-webkit-padding-start` set to `40px`. This is what gives it its indentation.
 * In the inspector, under the `nav ul` section, add a new property called `padding` and set its value to `0`.
 * Notice that the indentation is now gone.
+
 ### Fix
 * In general, when creating an HTML/CSS based page or site, we want to control our presentation as much as possible.
 Instead of manually overriding all the browsers' opinions, we use a **reset** or **normalize** file to add some CSS
