@@ -1,0 +1,115 @@
+/* 
+some properties of CSS are inherited from parent to its children
+finding out which properties are or not inherited is both a matter
+of experience and logic
+*/
+body {
+    font-family: sans-serif; /* inherited */
+    border: 10px dashed pink; /* not inherited */
+    color: green; /* inherited */
+}
+
+a {
+    color: green; /* overridden because browsers define their own colors for <a> */
+}
+
+/* a direct property always takes precedence over an inherited property */
+h1 {
+    font-family: serif;
+}
+
+/* conflicting rules */
+
+/* tag <p> AND class="announcement" */
+/* it seems that .announcement is more important
+than p even though it comes before it in the code
+it seems that targeting classes is more specific
+than targeting elements */
+.announcement {
+    color: red;
+    font-weight: bold;
+    border: 3px solid red;
+    padding: 5px;
+    margin: 20px;
+}
+
+/*
+Specificity rules:
+- To determine which rule takes precedence, use the following calculation:
+- a=0, b=0, c=0, d=0
+- Add up all the IDs in your selector, and set b to that number
+- Add up all the classes in your selector, and set c to that number
+- Add up all the elements in your selector, and set d to that number
+- Compare the numbers from left to right, and the first selector that has the biggest number wins
+
+<section>
+  <p class="announcement">hello</p> <!-- orange -->
+  <p>hello 2</p> <!-- green -->
+</section>
+<p>outside</p> <!-- red -->
+*/
+p.announcement { /* a=0, b=0, c=1, d=1 */
+    color: orange;
+}
+.announcement { /* a=0, b=0, c=1, d=0 */
+    color: blue;
+}
+
+p { /* a=0, b=0, c=0, d=1 */
+    color: red;
+}
+section p { /* a=0, b=0, c=0, d=2 */
+    color: green;
+}
+
+section p { /* a=0, b=0, c=0, d=2 will take precedence over previous one because of source order */
+    color: pink;
+}
+
+/*
+<nav>
+  <ul>
+      <li>about us</li>
+  </ul>
+</nav>
+
+what color will the "about us" text be, and why?
+*/
+li {
+    color: blue;
+}
+nav ul {
+    color: red;
+}
+
+
+/*
+when there is a conflicting rule, the last one in the source code will be chosen
+this applies ACROSS FILES
+your own CSS files should always be included LAST
+*/
+
+p {
+    color: blue !important; /* nuke all of css, doesn't care about specificity or anything for that matter */
+}
+
+p {
+    color: purple;
+}
+
+/* The Cascade: all the rules of CSS in the order where they are applied
+    1. Importance:
+        Ambiguous rules with !important ALWAYS takes precedence over a rule without !important.
+    2. Specificity
+        Given the same importance, a rule with a higher specificity will takes precedence over
+        a conflicting rule with lower specificity.
+        Specificity is calculated using a, b, c, d and the highest specificity is the one with
+        the first highest number.
+        
+        a: a=0 if the style is not inline, a=1 if the style is inline. <p style="color: red"> has a=1, b=0, c=0, d=0
+        b: Add up all the IDs in your selector, and set b to that value. e.g. #main_header #main_tagline b=2
+        c: Add up all the classes (and pseudo-classes) in your selector, set c to that value e.g. .announcement p c=1
+        d: Add up all the elements (and pseudo-elements) in your selector, and set d to that value e.g. nav ul li d=3
+    3. Source ordering
+        Given the same importance AND the same specifity, the last rule in your source wins!
+*/
